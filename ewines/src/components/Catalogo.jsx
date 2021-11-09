@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import Contador from './itemsCount';
+
 
 class Catalogo  extends Component {
     constructor(props) {
@@ -20,7 +22,7 @@ class Catalogo  extends Component {
                     <h5 className="card-title">{this.state.vino}</h5>
                     <p className="card-text">{this.state.uva}</p>
                     <p className="card-text">{this.state.detalle}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <Contador stock={5} initial={1}/>   
                 </div>
             </div>
         );
