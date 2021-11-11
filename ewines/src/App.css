@@ -9,9 +9,7 @@
 
 .card {
   margin-top: 10px;
-  padding-top: 3%;
-  display: row;
-  width: 20%;
+  
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
