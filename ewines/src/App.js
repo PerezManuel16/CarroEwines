@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './components/navbar';
-import ItemsCatalogo from './components/lista';
+import Catalogo from './components/Catalogo';
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemsCatalogo/>
+      <Catalogo/>
       
     </div>
   );
