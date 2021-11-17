@@ -11,7 +11,7 @@ const ObjetosCarrito = () => {
 
     const [products, setProducts] = useState([])
     
-    console.log('quemioerdatenes mostrar', products)
+    console.log(' mostrar', products)
     useEffect (() =>{
         mostrar
         .then (res =>{
