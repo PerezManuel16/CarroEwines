@@ -1,14 +1,14 @@
 const data = [
-    {"id": 1,"vino":"Navarro Correa", "uva":"malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/nv-malbec1-3ac92c25284f3202e215899831185357-640-0.jpg"},
-    {"id": 2,"vino":"Navarro Correa", "uva":"malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/nv-malbec1-3ac92c25284f3202e215899831185357-640-0.jpg"},
-    {"id": 3,"vino":"Navarro Correa", "uva":"malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/nv-malbec1-3ac92c25284f3202e215899831185357-640-0.jpg"},
-    {"id": 4,"vino":"Navarro Correa", "uva":"malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"http://d3ugyf2ht6aenh.cloudfront.net/stores/001/151/809/products/nv-malbec1-3ac92c25284f3202e215899831185357-640-0.jpg"}
-    ];
+    {"id": 1,"vino":"Navarro Correa", "uva":"Malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"https://www.espaciovino.com.ar/media/default/0001/64/thumb_63492_default_medium.jpeg"},
+    {"id": 2,"vino":"Trumpeter", "uva":"Malbec", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"https://http2.mlstatic.com/D_NQ_NP_726718-MLA43336848134_092020-O.jpg"},
+    {"id": 3,"vino":"Rutini", "uva":"Cabernet Sauvignon", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"https://http2.mlstatic.com/D_NQ_NP_840224-MLA31009745834_062019-O.jpg"},
+    {"id": 4,"vino":"Dv Catena", "uva":"Syrah", "detalle":"Some quick example text to build on the card title and make up the bulk of the cards content.", "img":"https://http2.mlstatic.com/D_NQ_NP_676910-MLA46275886875_062021-O.jpg"}
+    ]
 
-    const mostrar = new Promise ((resolve, reject) =>{
+    const mostrar = new Promise ((resolve) =>{
         setTimeout(()=>{
             resolve(data)
-            reject ('Falló') 
+            
         }, 3000)
     })
 

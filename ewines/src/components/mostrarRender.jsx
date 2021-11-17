@@ -10,11 +10,11 @@ const MostrarRender = ({products}) =>{
             
             return (
                 <Catalogo
-                key={product.id}
-                vino={product.vino}
-                uva={product.uva}
-                detalle={product.detalle}
-                img={product.img}
+                key= {product.id}
+                vino= {product.vino}
+                uva= {product.uva}
+                detalle= {product.detalle}
+                img= {product.img}
                 />
             )
             })} 

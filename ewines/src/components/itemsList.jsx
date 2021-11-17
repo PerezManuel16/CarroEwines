@@ -10,6 +10,7 @@ const ObjetosCarrito = () => {
 
 
     const [products, setProducts] = useState([])
+
     
     console.log(' mostrar', products)
     useEffect (() =>{
@@ -20,6 +21,7 @@ const ObjetosCarrito = () => {
         .catch (err => alert ('Hay un error', err))
         
     },[])
+
     
     return (
         <>
