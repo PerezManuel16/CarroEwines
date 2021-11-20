@@ -5,7 +5,7 @@ import Catalogo from "./Catalogo"
 const MostrarRender = ({products}) =>{
     console.log ('Que productos tengo',products)
     return(
-        <div>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
             {products.map(product =>{
             
             return (

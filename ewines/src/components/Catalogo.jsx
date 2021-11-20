@@ -5,10 +5,9 @@ import Contador from './itemsCount';
 const Catalogo =({vino, uva, detalle, img})=>{
     console.log ('productos',vino)
     return(
-            <div className="row">
-                <div className="col-dm-4"> 
-                
-                    <div className="card" style={{ width: '18rem' }}>
+            
+                <div className="col">
+                    <div className="card">
                         <img  src={img} className="card-img-top" alt=""/>
                         <div className="card-body" >
                             <h5 className="card-title">{vino}</h5>
@@ -18,7 +17,7 @@ const Catalogo =({vino, uva, detalle, img})=>{
                         </div>
                     </div>
                 </div>
-            </div>
+            
     )
 }
 

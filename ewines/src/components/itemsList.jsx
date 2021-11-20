@@ -26,7 +26,8 @@ const ObjetosCarrito = () => {
     return (
         <>
         
-        <MostrarRender products={products}/>  
+        <MostrarRender products={products}/>
+         
         </>
     );
     

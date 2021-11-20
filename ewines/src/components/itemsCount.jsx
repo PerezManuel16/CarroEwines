@@ -1,8 +1,15 @@
 import { useState } from "react";
+import {PlusCircle} from 'react-bootstrap-icons';
+import {DashCircle} from 'react-bootstrap-icons';
+
+
+const Centrar = {
+    'justify-content': 'center',
+    'align-items': 'center'
+}
 
 const Contador = ({stock, initial}) => {
     
-
 
     const [count, setCount] = useState(initial)
 
@@ -25,10 +32,12 @@ const Contador = ({stock, initial}) => {
 
     return (
         <div>
-            <button className="btn btn-primary" onClick={aumentar}>+</button>
-                <h5>{count}</h5>
-            <button className="btn btn-primary" onClick={disminuir}>-</button><br />
-            <button className="btn btn-primary" onClick={onAdd}>Agregar al carrito</button>
+            <div className="row" style={Centrar}>
+                <button className="btn btn-link" onClick={aumentar}><PlusCircle/></button>
+                <icon>{count}</icon>                    
+                <button className="btn btn-link" onClick={disminuir}><DashCircle/></button><br />    
+            </div>            
+            <button className="btn btn-secondary" onClick={onAdd}>Agregar al carrito</button>
         </div>
 
     )
