@@ -27,7 +27,7 @@ const ObjetosCarrito = () => {
         <>
         
         <MostrarRender products={products}/>
-         
+        
         </>
     );
     

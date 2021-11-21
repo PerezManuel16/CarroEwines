@@ -2,6 +2,8 @@
 import Contador from './itemsCount';
 
 
+
+
 const Catalogo =({vino, uva, detalle, img})=>{
     console.log ('productos',vino)
     return(

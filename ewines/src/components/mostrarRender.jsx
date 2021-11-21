@@ -23,3 +23,4 @@ const MostrarRender = ({products}) =>{
 }
 
 export default MostrarRender; 
+

@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  max-width: 1000%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .App-logo {
@@ -12,6 +15,9 @@
   max-width: 300px;
 }
 
+Navbar.Brand{
+  margin-left: 25px;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

@@ -5,11 +5,12 @@ import ObjetosCarrito from './components/itemsList';
 
 
 
+
 function App() {
   return (
     <div className="App">
-      <NavBar/>
       
+      <NavBar/>
       <ObjetosCarrito/>
       
     </div>
