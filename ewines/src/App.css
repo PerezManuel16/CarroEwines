@@ -12,12 +12,10 @@
 
 .card {
   margin-top: 10px;
-  max-width: 300px;
+  max-width: 250px;
 }
 
-Navbar.Brand{
-  margin-left: 25px;
-}
+
 
 
 @media (prefers-reduced-motion: no-preference) {

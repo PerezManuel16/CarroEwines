@@ -7,7 +7,7 @@ const NavBar = () => {
             
                 <Navbar.Brand href="#home">E-Wines</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"  />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
+                <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="me-auto">
                         <Nav.Link href="#">Destacados</Nav.Link>
                         <Nav.Link href="#">Tintos</Nav.Link>        

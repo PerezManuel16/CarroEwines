@@ -3,11 +3,7 @@ import {PlusCircle} from 'react-bootstrap-icons';
 import {DashCircle} from 'react-bootstrap-icons';
 
 
-const Centrar = {
-    'justify-content': 'center',
-    'align-items': 'center',
-    
-}
+
 
 const Contador = ({stock, initial}) => {
     
@@ -33,9 +29,9 @@ const Contador = ({stock, initial}) => {
 
     return (
         <div>
-            <div style={Centrar}>
+            <div >
                 <button className="btn btn-link" onClick={aumentar}><PlusCircle/></button>
-                <icon>{count}</icon>                    
+                <span>{count}</span>                    
                 <button className="btn btn-link" onClick={disminuir}><DashCircle/></button>  
             </div>            
             <button className="btn btn-secondary" onClick={onAdd}>Agregar al carrito</button>
