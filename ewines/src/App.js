@@ -1,5 +1,5 @@
 import './App.css';
-import ItemListContainer from './components/itemDetailContainer';
+import ItemListContainer from './components/itemListContainer';
 import ObjetosCarrito from './components/itemsList';
 import NavBar from './components/navbar';
 
