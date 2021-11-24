@@ -13,6 +13,7 @@ const MostrarRender = ({products}) =>{
                 key= {product.id}
                 vino= {product.vino}
                 uva= {product.uva}
+                precio ={product.precio}
                 detalle= {product.detalle}
                 img= {product.img}
                 />

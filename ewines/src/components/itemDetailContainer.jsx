@@ -19,7 +19,6 @@ const ItemListContainer = () =>{
     return(
         <div>
         <MostrarRender products={products}/>
-        
         </div>
     );
 
