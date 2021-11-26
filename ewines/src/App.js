@@ -1,7 +1,9 @@
 import './App.css';
-import ItemListContainer from './components/itemListContainer';
-import ObjetosCarrito from './components/itemsList';
+
+import ObjetosCarrito from './components/ObjetosCarrito';
 import NavBar from './components/navbar';
+import {Routes, Route} from "react-router-dom";
+import ItemDetailContainer from './components/itemDetailContainer';
 
 
 
@@ -14,8 +16,10 @@ function App() {
     <div className="App">
       
       <NavBar/>
-      {/* <ObjetosCarrito/> */}
-      <ItemListContainer/>
+      <Routes>
+      <Route path="/" element={<ObjetosCarrito/>}/>
+      <Route path="item/:id" element={<ItemDetailContainer/>}/> 
+      </Routes>
       
       
       

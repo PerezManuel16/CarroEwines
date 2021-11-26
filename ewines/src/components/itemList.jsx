@@ -1,15 +1,16 @@
-import Catalogo from "./Catalogo"
+import ItemDetail from "./item"
 
 
 
-const MostrarRender = ({products}) =>{
+
+const ItemList = ({products}) =>{
     console.log ('Que productos tengo',products)
     return(
         <div className="row row-cols-1 row-cols-md-3 g-4">
             {products.map(product =>{
             
             return (
-                <Catalogo
+                <ItemDetail
                 key= {product.id}
                 vino= {product.vino}
                 uva= {product.uva}
@@ -23,5 +24,5 @@ const MostrarRender = ({products}) =>{
     )
 }
 
-export default MostrarRender; 
+export default ItemList; 
 

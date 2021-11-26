@@ -1,13 +1,14 @@
 
 import Contador from './itemsCount';
+import { Link } from 'react-router-dom';
 
 
 
 
-const Catalogo =({vino, uva, precio, detalle, img})=>{
+const ItemDetail =({id, vino, uva, precio, detalle, img})=>{
     
     return(
-            
+            <Link to={`/item/${id}`}>
                 <div className="col">
                     <div className="card">
                         <img  src={img} className="card-img-top" alt=""/>
@@ -20,12 +21,12 @@ const Catalogo =({vino, uva, precio, detalle, img})=>{
                         </div>
                     </div>
                 </div>
-            
-    )
-}
+            </Link>
+    );
+};
 
 
-export default Catalogo;
+export default ItemDetail;
 
 
 

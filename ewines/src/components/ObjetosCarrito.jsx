@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import MostrarRender from "./mostrarRender";
-import mostrar from "./data";
+import ItemList from "./itemList";
+import Mostrar from "./data";
 
 
 
@@ -14,7 +14,7 @@ const ObjetosCarrito = () => {
     
     console.log(' mostrar', products)
     useEffect (() =>{
-        mostrar
+        Mostrar
         .then (res =>{
             setProducts (res)
         })
@@ -26,7 +26,7 @@ const ObjetosCarrito = () => {
     return (
         <>
         
-        <MostrarRender products={products}/>
+        <ItemList products={products}/>
         
         </>
     );
