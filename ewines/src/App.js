@@ -1,9 +1,11 @@
 import './App.css';
 
-import ObjetosCarrito from './components/ObjetosCarrito';
+
 import NavBar from './components/navbar';
 import {Routes, Route} from "react-router-dom";
 import ItemDetailContainer from './components/itemDetailContainer';
+import ItemListContainer from './components/itemListContainer';
+
 
 
 
@@ -17,7 +19,7 @@ function App() {
       
       <NavBar/>
       <Routes>
-      <Route path="/" element={<ObjetosCarrito/>}/>
+      <Route path="/" element={<ItemListContainer/>}/>
       <Route path="item/:id" element={<ItemDetailContainer/>}/> 
       </Routes>
       

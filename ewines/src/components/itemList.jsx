@@ -1,6 +1,4 @@
-import ItemDetail from "./item"
-
-
+import Item from "./item"
 
 
 const ItemList = ({products}) =>{
@@ -10,19 +8,20 @@ const ItemList = ({products}) =>{
             {products.map(product =>{
             
             return (
-                <ItemDetail
+                <Item
                 key= {product.id}
                 vino= {product.vino}
                 uva= {product.uva}
                 precio ={product.precio}
                 detalle= {product.detalle}
                 img= {product.img}
+                id={product.id}
                 />
-            )
+            );
             })} 
         </div>
-    )
-}
+    );
+};
 
 export default ItemList; 
 

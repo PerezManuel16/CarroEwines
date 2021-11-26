@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./item";
 import Mostrar from "./data";
+import ItemDetail from "./ItemDetail";
 
 
 
@@ -9,8 +9,7 @@ import Mostrar from "./data";
 const ItemDetailContainer =() => {
     const [item, setItems] = useState ({});
     console.log ("item",item);
-    console.log(useParams);
-    const {id} =useParams ();
+    const { id } = useParams();
     console.log ("ide de useParams", id);
     console.log ("tipo de dato Id", typeof id);
 

@@ -5,28 +5,33 @@ import { Link } from 'react-router-dom';
 
 
 
-const ItemDetail =({id, vino, uva, precio, detalle, img})=>{
+const Item =({ vino, uva, precio, detalle, img, id})=>{
     
     return(
-            <Link to={`/item/${id}`}>
+            
                 <div className="col">
+                    
                     <div className="card">
+                    <Link to={`/item/${id}`}>
                         <img  src={img} className="card-img-top" alt=""/>
                         <div className="card-body" >
                             <h5 className="card-title">{vino}</h5>
                             <p className="card-text">{uva}</p>
                             <p className="card-text"> Precio: {precio}</p>
                             <p className="card-text">{detalle}</p>
-                            <Contador stock={5} initial={1}/>   
+                              
                         </div>
+                    </Link>
+                    <Contador stock={5} initial={1}/> 
                     </div>
+                    
                 </div>
-            </Link>
+                
     );
 };
 
 
-export default ItemDetail;
+export default Item;
 
 
 
