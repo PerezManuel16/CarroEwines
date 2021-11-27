@@ -1,15 +1,29 @@
 const ItemDetail = (props) => {
     const {vino, uva, precio, detalle, img } =props.item;
     return (
-        <div>
-            <h1>{vino}</h1>
-            <h2>{uva}</h2>
-            <h3>{precio}</h3>
-            <h4>{detalle}</h4>
-            <img src={`${img}`} alt={`${img}`}></img>
+        <div className="centrado">
+        <div className="card text-center">
+            <div className="card-header">
+                {vino}
+            </div>
+            <div className="card-body">
+                <img src={`${img}`} className="card-img-top" alt={`${img}`}></img>
+                <h5 className="card-title">Precio: {precio}</h5>
+                <p className="card-text">{detalle}</p>
+                
+            </div>
+            <div className="card-footer text-muted">
+                
+            </div>
         </div>
-
+        </div>
     );
 };
 
 export default ItemDetail; 
+
+
+
+
+
+

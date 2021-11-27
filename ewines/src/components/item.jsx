@@ -11,15 +11,15 @@ const Item =({ vino, uva, precio, detalle, img, id})=>{
             
                 <div className="col">
                     
-                    <div className="card">
-                    <Link to={`/item/${id}`}>
+                    <div className="card" >
+                    <Link to={`/item/${id}`} className="items">
                         <img  src={img} className="card-img-top" alt=""/>
                         <div className="card-body" >
                             <h5 className="card-title">{vino}</h5>
                             <p className="card-text">{uva}</p>
-                            <p className="card-text"> Precio: {precio}</p>
+                            <p className="card-text"> Precio: ${precio}</p>
                             <p className="card-text">{detalle}</p>
-                              
+
                         </div>
                     </Link>
                     <Contador stock={5} initial={1}/> 

@@ -3,11 +3,24 @@
   max-width: 1000%;
   margin-left: 2%;
   margin-right: 2%;
+  
+}
+.centrado{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.items{
+  text-decoration:none;
+  color: black;
+}
+.items:hover{
+  color: black;
 }
 
 .card {
@@ -15,7 +28,9 @@
   max-width: 250px;
 }
 
-
+.link {
+  color: #FFF;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
