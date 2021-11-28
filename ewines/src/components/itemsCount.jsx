@@ -23,11 +23,7 @@ const Contador = ({stock, initial, onAdd}) => {
             setCount (restar);
         }
     };
-    const elementosCarrito = () => {
-        if(stock>0){
-            onAdd(count)
-        }
-    };
+    
 
     return (
         <div>
@@ -36,7 +32,7 @@ const Contador = ({stock, initial, onAdd}) => {
                 <span>{count}</span>                    
                 <button className="btn btn-link" onClick={disminuir}><DashCircle/></button>  
             </div>            
-            <button className="btn btn-secondary" onClick={elementosCarrito}>Agregar al carrito</button>
+            <button className="btn btn-secondary" onClick={onAdd}>Agregar al carrito</button>
         </div>
 
     )

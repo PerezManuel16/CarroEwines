@@ -1,23 +1,11 @@
 
 import Contador from "./itemsCount";
-import { useState } from "react";
+
+
 
 
 const ItemDetail = ({item}) => {
     
-    const [stock, setStock] = useState(item.stock)
-    
-    
-    const onAdd = () => {
-    const agregarCarrito = item.stock-1
-        if (agregarCarrito >= item.stock){
-            setStock (agregarCarrito)
-        }
-        
-    };
-        
-
-
 
     
     return (
@@ -30,7 +18,7 @@ const ItemDetail = ({item}) => {
                 <p className="card-text"> Stock: {item.stock} unidades</p>
                 <p className="card-text">{item.detalle}</p>
 
-                <Contador stock={item.stock} initial={1} onAdd={onAdd}/>
+                <Contador stock={item.stock} initial={1} />
             </div>
             <div className="card-footer text-muted">
                 
