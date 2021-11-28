@@ -10,8 +10,7 @@ const ItemDetailContainer =() => {
     const [item, setItems] = useState ({});
     console.log ("item",item);
     const { id } = useParams();
-    console.log ("ide de useParams", id);
-    console.log ("tipo de dato Id", typeof id);
+    
 
 
     useEffect (()=> {

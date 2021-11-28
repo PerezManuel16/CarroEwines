@@ -1,14 +1,24 @@
 .App {
   text-align: center;
-  max-width: 1000%;
-  margin-left: 2%;
-  margin-right: 2%;
+  max-width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
   
 }
 .centrado{
   margin-top: 5%;
   display: flex;
   justify-content: center;
+}
+
+.margenNombre{
+  margin-left: 10px;
+}
+.NavBar{
+  display: flex;
+  width: 90%;
+  text-decoration: none;
+  justify-content:space-around;
 }
 
 .App-logo {

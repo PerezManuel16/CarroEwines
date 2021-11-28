@@ -1,3 +1,6 @@
+import Contador from "./itemsCount";
+
+
 const ItemDetail = (props) => {
     const {vino, uva, precio, detalle, img } =props.item;
     return (
@@ -10,7 +13,7 @@ const ItemDetail = (props) => {
                 <img src={`${img}`} className="card-img-top" alt={`${img}`}></img>
                 <h5 className="card-title">Precio: {precio}</h5>
                 <p className="card-text">{detalle}</p>
-                
+                <Contador stock={5} initial={1}/>
             </div>
             <div className="card-footer text-muted">
                 
