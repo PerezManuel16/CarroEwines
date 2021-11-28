@@ -5,7 +5,7 @@ import {DashCircle} from 'react-bootstrap-icons';
 
 
 
-const Contador = ({stock, initial}) => {
+const Contador = ({stock, initial, onAdd}) => {
     
 
     const [count, setCount] = useState(initial)
@@ -23,8 +23,10 @@ const Contador = ({stock, initial}) => {
             setCount (restar);
         }
     };
-    const onAdd = () => {
-        alert (`Agregaste ${count} productos`)
+    const elementosCarrito = () => {
+        if(stock>0){
+            onAdd(count)
+        }
     };
 
     return (
@@ -34,7 +36,7 @@ const Contador = ({stock, initial}) => {
                 <span>{count}</span>                    
                 <button className="btn btn-link" onClick={disminuir}><DashCircle/></button>  
             </div>            
-            <button className="btn btn-secondary" onClick={onAdd}>Agregar al carrito</button>
+            <button className="btn btn-secondary" onClick={elementosCarrito}>Agregar al carrito</button>
         </div>
 
     )

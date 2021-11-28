@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Item =({ vino, uva, precio, detalle, img, id})=>{
+const Item =({ vino, uva, precio, detalle, img, id, stock})=>{
     
     return(
             
@@ -22,7 +22,7 @@ const Item =({ vino, uva, precio, detalle, img, id})=>{
 
                         </div>
                     </Link>
-                    <Contador stock={5} initial={1}/> 
+                    <Contador stock={stock} initial={1}/> 
                     </div>
                     
                 </div>
