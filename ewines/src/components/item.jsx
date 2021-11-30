@@ -1,5 +1,5 @@
 
-import Contador from './itemsCount';
+
 import { Link } from 'react-router-dom';
 
 
@@ -19,12 +19,9 @@ const Item =({ vino, uva, precio, detalle, img, id, stock})=>{
                             <p className="card-text">{uva}</p>
                             <p className="card-text"> Precio: ${precio}</p>
                             <p className="card-text">{detalle}</p>
-
                         </div>
                     </Link>
-                    <Contador stock={stock} initial={1}/> 
                     </div>
-                    
                 </div>
                 
     );
