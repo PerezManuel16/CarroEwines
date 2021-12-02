@@ -20,8 +20,7 @@ const ItemListContainer = () => {
         <div>
         
         <ItemList products={products}/>
-         
-        
+
         </div>
     );
     

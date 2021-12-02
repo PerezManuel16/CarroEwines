@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Mostrar from "./data";
 import ItemDetail from "./ItemDetail";
-
+// import { CartProvider } from "./contexts/cartContext";
 
 
 

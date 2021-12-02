@@ -2,6 +2,7 @@
 import Contador from "./itemsCount";
 import {Link} from "react-router-dom";
 import { useEffect, useState } from "react";
+import { UseCart } from "./contexts/cartContext";
 
 
 
@@ -10,14 +11,18 @@ import { useEffect, useState } from "react";
 
 const ItemDetail = ({item}) => {
 
+    const {aumentar, disminuir}= UseCart();
+
     const [quantity, setQuantity] = useState(0)
 
 useEffect(() => {
-    let mensaje = `Has agregado al carrito ${quantity} productos`
+    let mensaje = `Has agregado al carrito ${quantity} producto`
     if (quantity !== 0) {
         quantity > 1 ? alert (mensaje+'s'): alert (mensaje);
+        aumentar(item,  quantity);
     }
 },[quantity])
+console.log ("quantity", quantity);
 
     return (
         <div className="centrado">
@@ -41,6 +46,20 @@ useEffect(() => {
 };
 
 export default ItemDetail; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

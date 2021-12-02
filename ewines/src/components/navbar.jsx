@@ -6,7 +6,7 @@ const NavBar = () => {
 
     return (
         <Navbar bg="dark" expand="lg" variant="dark">
-            <Navbar.Brand to="/" className="margenNombre">E-Wines</Navbar.Brand>
+                <Navbar.Brand to="/" className="margenNombre"><Link to="/" className="nav-link "> E-Wines</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"  />
                 <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="NavBar">
