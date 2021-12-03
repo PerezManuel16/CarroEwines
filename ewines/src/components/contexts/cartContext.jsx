@@ -61,9 +61,25 @@ export const CartProvider = ({children}) => {
         return agregarCarrito;
         
     }
-    
+
+
+    const sumarItems = () =>{
+        let cantidadItems = 0;
+        addProduct.map( item =>{
+            cantidadItems = cantidadItems + item.quantity;
+        })
+        return cantidadItems;
+    }
+
+    const precioTotal = () => {
+        let precio = 0;
+        setAddProduct.map(item =>{
+            precio = precio (item.precio * item.quantity);
+        })
+        return precio;
+    }
     return(
-        <CartContext.Provider value = {{aumentar, disminuir, vaciarCarrito, setAddProduct}}>
+        <CartContext.Provider value = {{aumentar, disminuir, vaciarCarrito, setAddProduct, sumarItems, precioTotal, agregarCart, addProduct}}>
             {children}
         </CartContext.Provider>
     )
