@@ -11,7 +11,7 @@ import { UseCart } from "./contexts/cartContext";
 
 const ItemDetail = ({item}) => {
 
-    const {aumentar, disminuir}= UseCart();
+    const {aumentar}= UseCart();
 
     const [quantity, setQuantity] = useState(0)
 
@@ -35,7 +35,8 @@ console.log ("quantity", quantity);
                 <p className="card-text">{item.detalle}</p>
 
                 <Contador stock={item.stock} initial={0} setQuantity ={setQuantity}/><br/>
-                <Link to="/cart"> <button className="btn btn-secondary">Terminar Compra</button> </Link>
+                <Link to="/cart" className="btn btn-secondary">Terminar Compra</Link> <br /><br />
+                <Link to="/" className= "btn btn-secondary">Seguir Comprando</Link>
             </div>
             <div className="card-footer text-muted">
                 

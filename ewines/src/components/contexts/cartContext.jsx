@@ -34,8 +34,10 @@ export const CartProvider = ({children}) => {
         }
         
 
+    
 
     }
+
     const disminuir = (id) => {
         let index = 0;
         addProduct.map(product =>{
@@ -55,8 +57,8 @@ export const CartProvider = ({children}) => {
 
     const agregarCart = (id) => {
         let agregarCarrito = false;
-        addProduct.map(product => {
-            if( product.item.id === id) agregarCarrito = true;
+        addProduct.map(prod => {
+            if( prod.item.id === id) agregarCarrito = true;
         });
         return agregarCarrito;
         
@@ -66,20 +68,29 @@ export const CartProvider = ({children}) => {
     const sumarItems = () =>{
         let cantidadItems = 0;
         addProduct.map( item =>{
-            cantidadItems = cantidadItems + item.quantity;
+            cantidadItems = (cantidadItems + item.quantity);
         })
         return cantidadItems;
     }
+    
+    const precioTotal = ( ) =>{
+        return addProduct.reduce(( acc, el) => acc + el.quantity * el.item.precio, 0)
+    }    
 
-    const precioTotal = () => {
-        let precio = 0;
-        setAddProduct.map(item =>{
-            precio = precio (item.precio * item.quantity);
-        })
-        return precio;
-    }
+    
     return(
-        <CartContext.Provider value = {{aumentar, disminuir, vaciarCarrito, setAddProduct, sumarItems, precioTotal, agregarCart, addProduct}}>
+        <CartContext.Provider 
+        value = {{ 
+                    aumentar,
+                    disminuir,
+                    vaciarCarrito, 
+                    setAddProduct, 
+                    sumarItems, 
+                    precioTotal,
+                    agregarCart, 
+                    addProduct,
+        }}
+        >
             {children}
         </CartContext.Provider>
     )
