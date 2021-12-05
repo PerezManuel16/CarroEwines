@@ -26,7 +26,7 @@ console.log ("quantity", quantity);
 
     return (
         <div className="centrado">
-        <div className="card text-center">
+        <div className="card text-center" key={item.id}>
             <div className="card-header">{item.vino}</div>
             <div className="card-body">
                 <img src={`${item.img}`} className="card-img-top" alt={`${item.img}`}></img>

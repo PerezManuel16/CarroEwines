@@ -18,3 +18,6 @@ const data = [
 
 
     export default Mostrar;
+
+
+    
