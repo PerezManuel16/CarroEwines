@@ -19,15 +19,28 @@ export const Cart = () => {
                         :
                         <>
                         <h1>Resumen de compra</h1>
-                        {addProduct.map((prod) => (
-                            <div key={prod.item.id}>
-                                <h3>{prod.item.vino}</h3>
-                                <p>Cantidad : {prod.quantity}</p>
-                                <p>Precio: ${prod.quantity * prod.item.precio}</p>
-                                <button className="btn btn-secondary" onClick={() => disminuir(prod.item.id)}> eliminar </button>
-                            </div>
-                        ))}
-                        <p><p>Precio Total: ${precioTotal()}</p></p>
+                                <table className="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Tipo de Vino</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Precio Por Producto</th>
+                                        </tr>
+                                    </thead>
+                                    {addProduct.map((prod) => (
+                                        <tbody  key={prod.item.id}>
+                                            <tr>
+                                                <th scope="row">{prod.item.vino}</th>
+                                                <td>{prod.item.uva}</td>
+                                                <td>{prod.quantity}</td>
+                                                <td>${prod.quantity * prod.item.precio}</td>
+                                                <td><button className="btn btn-secondary" onClick={() => disminuir(prod.item.id)}> eliminar </button></td>
+                                            </tr>
+                                        </tbody>
+                                    ))}
+                                </table>
+                        <p>Precio Total: ${precioTotal()}</p>
                     <hr />
                     <button className="btn btn-secondary" onClick={vaciarCarrito}>vaciar Carrito </button>
                     <Link to="checkout" className=" btn btn-secondary">terminar mi compra</Link>
@@ -37,3 +50,23 @@ export const Cart = () => {
     )
 
 }
+
+// {/* <table class="table">
+//     <thead>
+//         <tr>
+//         <th scope="col">#</th>
+//         <th scope="col">First</th>
+//         <th scope="col">Last</th>
+//         <th scope="col">Handle</th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//         <tr>
+//         <th scope="row">1</th>
+//         {/* <td>Mark</td>  Nombre del vino */}
+//         {/* <td>Otto</td>    Cantidad */}
+//         <td> precio por Unidad</td>
+//         </tr>
+        
+//     </tbody>
+// </table> */}
