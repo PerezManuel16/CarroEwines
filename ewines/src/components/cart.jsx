@@ -51,22 +51,3 @@ export const Cart = () => {
 
 }
 
-// {/* <table class="table">
-//     <thead>
-//         <tr>
-//         <th scope="col">#</th>
-//         <th scope="col">First</th>
-//         <th scope="col">Last</th>
-//         <th scope="col">Handle</th>
-//         </tr>
-//     </thead>
-//     <tbody>
-//         <tr>
-//         <th scope="row">1</th>
-//         {/* <td>Mark</td>  Nombre del vino */}
-//         {/* <td>Otto</td>    Cantidad */}
-//         <td> precio por Unidad</td>
-//         </tr>
-        
-//     </tbody>
-// </table> */}
