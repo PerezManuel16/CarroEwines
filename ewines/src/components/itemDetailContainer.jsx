@@ -20,7 +20,7 @@ const ItemDetailContainer =() => {
                 setItem({...snapshot.data(), id: snapshot.id});
             }
         });
-    },[]);
+    },[id]);
     console.log(item);
 
     return   <ItemDetail item={item}/>;

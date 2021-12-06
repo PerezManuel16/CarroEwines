@@ -12,8 +12,8 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="NavBar">
                         <Link to="/Destacados" className="nav-link">Destacados</Link>
-                        <Link to="categoria/Tinto" className="nav-link">Tintos</Link>        
-                        <Link to="categoria/Blanco" className="nav-link">Blancos</Link>
+                        <Link to="/categoria/Tinto" className="nav-link">Tintos</Link>        
+                        <Link to="/categoria/Blanco" className="nav-link">Blancos</Link>
                         <Link to="/Contacto" className="nav-link">Contacto</Link>
                         <CartWidget/>
                     </Nav>

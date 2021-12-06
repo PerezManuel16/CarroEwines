@@ -17,12 +17,14 @@ const ItemListContainer = () => {
         const db = getFirestore();
         const itemsCollection = collection(db, 'items');
         if (itemId){
-                const q = query(itemsCollection,  where ("categoria", "==", "itemId"));
+                const q = query(itemsCollection, where("categoria", "==", itemId ));
                 getDocs(q).then((snapshot) => {
                     setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-
+                
                 })
-            } else {
+                
+            }
+            else {
                 getDocs(itemsCollection).then((snapshot) => {
                     setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
             })

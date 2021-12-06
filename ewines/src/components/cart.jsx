@@ -14,7 +14,7 @@ export const Cart = () => {
                     addProduct.length === 0 ?
                         <>
                         <h2>No hay productos Agregados</h2>
-                        <Link to="/" className= "btn btn-secondary">Ir a comprar</Link>
+                        <Link to="/Destacados" className= "btn btn-secondary">Ir a comprar</Link>
                         </>
                         :
                         <>
