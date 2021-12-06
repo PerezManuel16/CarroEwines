@@ -31,12 +31,10 @@ console.log ("quantity", quantity);
             <div className="card-body">
                 <img src={`${item.img}`} className="card-img-top" alt={`${item.img}`}></img>
                 <h5 className="card-title">Precio: {item.precio}</h5>
-                <p className="card-text"> Stock: {item.stock} unidades</p>
                 <p className="card-text">{item.detalle}</p>
-
                 <Contador stock={item.stock} initial={0} setQuantity ={setQuantity}/><br/>
                 <Link to="/cart" className="btn btn-secondary">Terminar Compra</Link> <br /><br />
-                <Link to="/" className= "btn btn-secondary">Seguir Comprando</Link>
+                <Link to="/Destacados" className= "btn btn-secondary">Seguir Comprando</Link>
             </div>
             <div className="card-footer text-muted">
                 

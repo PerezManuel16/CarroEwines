@@ -23,13 +23,9 @@ const ItemDetailContainer =() => {
     },[]);
     console.log(item);
 
-    return  (
-    <>
+    return   <ItemDetail item={item}/>;
     
-    <ItemDetail item={item}/>;
-                
-    </>
-    )
+    
 };
 
 export default ItemDetailContainer;

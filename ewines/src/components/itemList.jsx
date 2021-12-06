@@ -17,6 +17,7 @@ const ItemList = ({products}) =>{
                 img= {product.img}
                 id={product.id}
                 stock={product.stock}
+                categoria={product.categoria}
                 />
             );
             })} 
