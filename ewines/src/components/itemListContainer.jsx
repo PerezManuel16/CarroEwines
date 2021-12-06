@@ -49,23 +49,3 @@ export default ItemListContainer;
 
 
 
-// getDocs(itemsCollection).then((snapshot) => {
-//     setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-
-// });
-
-// },[]);
-
-
-
-// getDocs(itemsCollection)
-// .then((snapshot) => {
-//     if (itemId === undefined) {
-//         setProducts(snapshot.docs.map((doc) =>({id:doc.categoria,...doc.data()})))
-//     } else {
-//         let data = snapshot.docs.map((doc) =>({id:doc.categoria,...doc.data()}));
-//         setProducts(data.filter((doc) => doc.id === itemId));
-//     }
-// })
-// },[itemId]);
-
