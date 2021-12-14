@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
-
-
-
-
-
 const Item =({ vino, uva, precio, detalle, img, id, stock})=>{
     
     

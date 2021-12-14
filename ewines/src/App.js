@@ -13,6 +13,8 @@ import { Cart } from './components/cart';
 
 
 
+
+
 function App() {
   
   return (
@@ -25,6 +27,7 @@ function App() {
       <Route  path="/Destacados" element={<ItemListContainer/>}/>
       <Route path="item/:id" element={<ItemDetailContainer/>}/> 
       <Route path="/cart" element={<Cart/>} />
+
       </Routes>
       
       
