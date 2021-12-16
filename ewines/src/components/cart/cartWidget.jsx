@@ -1,5 +1,5 @@
 
-import { UseCart } from "./contexts/cartContext";
+import { UseCart } from "../contexts/cartContext";
 import { Link } from "react-router-dom";
 
 
@@ -23,5 +23,4 @@ const CartWidget = () => {
         )}
 
 }
-
 export default  CartWidget; 

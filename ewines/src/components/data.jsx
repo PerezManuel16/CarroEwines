@@ -13,7 +13,7 @@ const data = [
         setTimeout(()=>{
             resolve(data)
             
-        }, 2000)
+        }, 1500)
     })
 
 

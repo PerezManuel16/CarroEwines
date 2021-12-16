@@ -1,11 +1,7 @@
 import { doc, getDoc, getFirestore,} from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import ItemDetail from "./ItemDetail";
-// import { CartProvider } from "./contexts/cartContext";
-
-
 
 const ItemDetailContainer =() => {
     const [item, setItem] = useState ([]);
@@ -21,11 +17,7 @@ const ItemDetailContainer =() => {
             }
         });
     },[id]);
-    console.log(item);
-
     return   <ItemDetail item={item}/>;
-    
-    
 };
 
 export default ItemDetailContainer;

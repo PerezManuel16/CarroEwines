@@ -1,18 +1,11 @@
 import { addDoc, collection, getFirestore, writeBatch, doc } from "@firebase/firestore";
 import { useContext, useState} from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "./contexts/cartContext";
+import { CartContext } from "../contexts/cartContext";
 import Swal from "sweetalert2"
-
-
-
-
-
-
 
 export const Cart = () => {
     const {addProduct, disminuir, vaciarCarrito,  precioTotal, }= useContext(CartContext)
-    
     
     const [values, setValues] = useState ({
         name:"",
@@ -46,7 +39,7 @@ export const Cart = () => {
             total: precioTotal()
         };
         const db = getFirestore();
-        const ordersCollection = collection(db, "orders");
+        const ordersCollection = collection(db, "orders");        
         addDoc(ordersCollection, order).then(({ id }) => {
             Swal.fire({
                 icon: 'success',
@@ -59,32 +52,23 @@ export const Cart = () => {
         });
         const batch = writeBatch(db);
         addProduct.forEach((prod) => {
-            console.log("interacion del forEach", prod.item);
             const itemsRef= doc(db, "items" , prod.item.id);
             batch.update(itemsRef, {stock: prod.item.stock - prod.quantity});
         });
         batch.commit();
-        
-        
     };
-    
-    
-
-
-
-
 
     return(
         <div>
                 {
                     addProduct.length === 0 ?
                         <>
-                        <h2>No hay productos Agregados</h2>
+                        <h2 className="sinProductos">No hay productos Agregados</h2>
                         <Link to="/Destacados" className= "btn btn-secondary">Ir a comprar</Link>
                         </>
                         :
                         <>
-                        <h1>Resumen de compra</h1>
+                        <h1 className="finalizarCompra">Resumen de compra</h1>
                         <table className="table table-striped table-hover">
                                     <thead>
                                         <tr>
@@ -108,23 +92,31 @@ export const Cart = () => {
                                         </tbody>
                                     ))}
                                 </table>
-                        <p>Precio Total: ${precioTotal()}</p>
+                        <p className="precioTotal">Precio Total: ${precioTotal()}</p>
                     <hr />
-
                     <div>
-                        <form onSubmit={handleSubmit}>
-                            <h2>Formulario para finalizar Compra</h2><hr />
-                            <input type="text" name="name" placeholder="Nombre" value={values.name} onChange={handleInputChange}/><br />
-                            <input type="text" name="phone" placeholder="Teléfono" value={values.phone} onChange={handleInputChange}/><br />
-                            <input type="email" name="email" placeholder="email" value={values.email} onChange={handleInputChange}/><br />
+                        <form onSubmit={handleSubmit} className="formulario">
+                            <h2>Formulario para finalizar Compra</h2>
+                            <div className="mb-3">
+                                <label className="form-label">Nombre Completo </label><br />
+                                <input type="text" name="name"  value={values.name} onChange={handleInputChange}/>
+                            </div>
+                            <div className="mb-3">
+                                <label className="form-label">Telefono</label><br />
+                                <input type="text" name="phone" value={values.phone} onChange={handleInputChange}/>
+                            </div>
+                            <div className="mb-3">
+                                <label  className="form-label">Email</label> <br />
+                                <input type="email" name="email"  value={values.email} onChange={handleInputChange}/>
+                            </div>
+                            <button className="btn btn-secondary" onClick={vaciarCarrito}>vaciar Carrito </button>
+                            <button className="btn btn-secondary" onClick={checkOut} >Finalizar Compra </button> 
+                            <hr />
                         </form>
                     </div>
-                    <button className="btn btn-secondary" onClick={vaciarCarrito}>vaciar Carrito </button>
-                    <button className="btn btn-secondary" onClick={checkOut} >Finalizar Compra </button>
                     </>
                 } 
         </div>
     )
 }
-
 

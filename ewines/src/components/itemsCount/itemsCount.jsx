@@ -2,17 +2,11 @@ import {  useState } from "react";
 import {PlusCircle} from 'react-bootstrap-icons';
 import {DashCircle} from 'react-bootstrap-icons';
 
-
-
-
 const Contador = ({stock, initial, setQuantity}) => {
-    
 
-    
     const [count, setCount] = useState(initial);
     const [rendCount, setRendCount] = useState(true);
     
-
     const aumentar = () => {
         const newValue = count +1
         if (newValue <= stock) {
@@ -21,7 +15,6 @@ const Contador = ({stock, initial, setQuantity}) => {
         
     };
     
-
     const disminuir = () => {
         const restar = count -1
         if (restar >= initial){

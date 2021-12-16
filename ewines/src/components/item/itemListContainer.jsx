@@ -3,12 +3,6 @@ import ItemList from "./itemList";
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore"; 
 import { useParams } from "react-router";
 
-
-
-
-
-
-
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const {itemId} = useParams()
@@ -21,27 +15,21 @@ const ItemListContainer = () => {
                 getDocs(q).then((snapshot) => {
                     setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
                 
-                })
-                
+                })                
             }
             else {
                 getDocs(itemsCollection).then((snapshot) => {
                     setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
             })
         }
-
 },[itemId]);
 
-    
-
     return (
-            <div>
-        <ItemList products={products}/>
+            <div className="fondo">
+                <h1 className="tituloDestacados">Vinos para disfrutar</h1>
+                <ItemList className="centrarProductos" products={products}/>
             </div>
-    );
-    
-
-
+    ); 
 };
 
 

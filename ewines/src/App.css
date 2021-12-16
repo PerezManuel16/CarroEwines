@@ -6,19 +6,43 @@
   
 }
 .centrado{
-  margin-top: 5%;
+  
   display: flex;
   justify-content: center;
+  background-color:#cfd3d6;  
+  
+  padding-bottom: 50px;
+} 
+
+
+
+.logo{
+  color: azure;
+  margin-left: 3%;
+  padding-bottom: 2%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500px;
+  text-decoration: none;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 5px;
+}
+.logo:hover{
+  color:#adb5bd;
 }
 
 .margenNombre{
   margin-left: 10px;
+  text-decoration: none;
+
 }
 .NavBar{
   display: flex;
   width: 90%;
   text-decoration: none;
   justify-content:space-around;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
 }
 
 .App-logo {
@@ -33,13 +57,62 @@
   color: black;
 }
 
+.row{
+  margin-left: 20px;
+}
+
 .card {
-  margin-top: 10px;
-  max-width: 250px;
+  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  display: flex;
+  max-width: 200px;
+  justify-content: center;
+  padding-bottom: 10px;
+  
 }
 
 .link {
   color: #FFF;
+}
+.fondo{
+  background-color: #cfd3d6; ;
+}
+
+.tituloDestacados{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: expanded;
+  color: black;
+}
+.formulario{
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.finalizarCompra{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 45px;
+}
+
+
+
+.precioTotal{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: initial;
+}
+
+.sinProductos{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 20%;
 }
 
 
